@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Document Analyzer</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">✦ DocuMind AI</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#analyzer">Analyzer</a>
+        <a href="#results">Results</a>
+    </nav>
+
+    <button class="nav-btn">AI Powered</button>
+</header>
+
+
+<section class="hero" id="home">
+
+    <div class="badge">✦ SMART DOCUMENT INTELLIGENCE</div>
+
+    <h1>
+        Make Your Documents
+        <span>Perfectly Written.</span>
+    </h1>
+
+    <p>
+        Analyze documents, detect grammar mistakes,
+        identify spelling errors and get intelligent
+        correction suggestions instantly.
+    </p>
+
+    <a href="#analyzer" class="main-btn">
+        Start Analyzing →
+    </a>
+
+</section>
+
+
+<section class="analyzer" id="analyzer">
+
+    <div class="section-heading">
+        <h2>Document Analyzer</h2>
+        <p>Upload your document to begin intelligent analysis.</p>
+    </div>
+
+    <div class="upload-box" id="dropArea">
+
+        <div class="upload-icon">☁</div>
+
+        <h3>Upload Your Document</h3>
+
+        <p>Drag and drop your file here or browse files</p>
+
+        <input
+            type="file"
+            id="fileInput"
+            accept=".pdf,.docx,.txt"
+            hidden
+        >
+
+        <button class="upload-btn"
+            onclick="document.getElementById('fileInput').click()">
+            Browse Files
+        </button>
+
+        <div class="file-info">
+            Supported formats: PDF, DOCX, TXT
+        </div>
+
+        <div id="fileName"></div>
+
+    </div>
+
+    <button class="analyze-btn" id="analyzeBtn">
+        ✦ Analyze Document
+    </button>
+
+</section>
+
+
+<section class="results" id="results">
+
+    <h2>Analysis Dashboard</h2>
+
+    <div class="stats">
+
+        <div class="stat-card">
+            <h3 id="totalErrors">0</h3>
+            <p>Total Errors</p>
+        </div>
+
+        <div class="stat-card">
+            <h3 id="grammarErrors">0</h3>
+            <p>Grammar Errors</p>
+        </div>
+
+        <div class="stat-card">
+            <h3 id="spellingErrors">0</h3>
+            <p>Spelling Errors</p>
+        </div>
+
+        <div class="stat-card">
+            <h3 id="qualityScore">100%</h3>
+            <p>Quality Score</p>
+        </div>
+
+    </div>
+
+
+    <div class="document-card">
+
+        <h3>Document Preview</h3>
+
+        <div id="documentPreview">
+            Your analyzed document will appear here.
+        </div>
+
+        <p class="legend">
+            <span class="red">■</span> Errors detected
+        </p>
+
+    </div>
+
+
+    <div class="correction-card">
+
+        <h3>Grammar & Spelling Suggestions</h3>
+
+        <div id="errorList">
+            No analysis available yet.
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+    <p>© 2026 DocuMind AI | Intelligent Document Analyzer</p>
+    <p>Grammar checking powered by LanguageTool.</p>
+</footer>
+
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>
